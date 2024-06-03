@@ -1,7 +1,7 @@
 # SaaS Table
 A dynamic table for expense management.
 
-![video-guide-screenshot](https://github.com/dajawhite/video-guide/assets/110269361/cc992c9a-d28a-40ee-9245-768e3038cbbe)
+![saas-table-screenshot](https://github.com/dajawhite/saas-table/assets/110269361/50f65570-8f5e-4cb5-9bbf-d0490d54b3b1)
 
 ## Setup
 1. Clone the repository:
