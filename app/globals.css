@@ -2,32 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.roboto{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.bg-nimbus{
+  background-color: #1b1d22;
+}
+
+.bg-rust{
+  background-color: #D15517;
+}
+
+.border-rust{
+  border-color: #D15517;
+}
+
+.bg-dark-rust{
+  background-color: #5D260A;
+}
+
+.border-nimbus{
+  border-color: #3f414a;
+}
+
+.text-nimbus{
+  color: #bcc1d4;
+}
+
+.bg-nimbus-light{
+  background-color: #bcc1d4;
+}
+
+.bg-nimbus-med{
+  background-color: #3f414a;
+}
+
+/* Custom checkbox label and checkmark styles */
+.custom-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox-label .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #3f414a;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #3f414a;
+  border-radius: 4px;
+}
+
+.custom-checkbox-label:hover .checkmark {
+  background: linear-gradient(to bottom, #222328, #191b20);
+  border-color: #3f414a;
+}
+
+.custom-checkbox-label input:checked ~ .checkmark {
+  background: linear-gradient(to bottom, #222328, #191b20);
+  border-color: #3f414a;
+}
+
+.custom-checkbox-label input:checked ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 7px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox-label input:indeterminate ~ .checkmark {
+  background: linear-gradient(to bottom, #222328, #191b20);
+  border-color: #3f414a;
+}
+
+.custom-checkbox-label input:indeterminate ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  width: 12px; 
+  height: 2px; 
+  background: white; 
+  border: none;
+}
+
+.custom-select{
+  width: 85px;
+  position: relative;
+
 }
